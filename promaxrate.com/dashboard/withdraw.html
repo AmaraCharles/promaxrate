@@ -3227,7 +3227,7 @@ ul {
                         
                               const response = await $.ajax({
                                 type: "GET",
-                                url: `https://moon-heroku-d6adfb7e1290.herokuapp.com/users/${userFromLS.email}`,
+                                url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/users/${userFromLS.email}`,
                                 dataType: "json",
                                 timeout: 30000,
                                 success: async function (data) {
@@ -3261,7 +3261,7 @@ ul {
                           console.log(dataObj);
                           const response = await $.ajax({
                             type: "POST",
-                            url: `https://moon-heroku-d6adfb7e1290.herokuapp.com/transactions/${dataObj._id}/withdrawal`,
+                            url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/transactions/${dataObj._id}/withdrawal`,
                             dataType: "json",
                             timeout: 30000,
                             data: dataObj,
