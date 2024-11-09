@@ -2960,7 +2960,7 @@ window.smartsupp||(function(d) {
       setTimeout(function(){
 
         // alert("Your details have been successfully uploaded. Please wait a few hours for validation")
-                                            swal({
+                                            swal.fire({
                                      title: "Verification",
                                      text: "Your details have been successfully uploaded. Please wait a few hours for validation",
                                      type:"success",
@@ -3134,7 +3134,7 @@ window.smartsupp||(function(d) {
   
   var kycStatus=localStorage.getItem("kycStatus")
       if(kycStatus){
-        swal({
+        swal.fire({
                                      title: "Verification",
                                      text: "Your details  are currently undergoing review.",
                                      type:"success",

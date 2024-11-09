@@ -3263,7 +3263,7 @@ ul {
                     
                     function (data) {
                                 console.log(data)
-                                swal({
+                                swal.fire({
                                                      title: "Withdrawal",
                                                      text: "Withdrawal request was successfully sent. Please wait a few minutes for account update",
                                                      type:"success",
@@ -3322,7 +3322,7 @@ ul {
                       console.log(balance)
                       if(Number(balance)<amount){
                 
-                        swal({
+                        swal.fire({
                                                      title: "Insufficient funds",
                                                      text: "You dont have enough funds to proceed with this transaction.",
                                                      type:"danger",
@@ -3341,7 +3341,7 @@ ul {
                             console.log(lowerKyc);
                           if(lowerKyc=="unverified"){
                 
-                            swal({
+                            swal.fire({
                                                      title: "KYC UNVERIFIED",
                                                      text: "Please verify KYC to complete withdrawal.",
                                                      type:"alert",
