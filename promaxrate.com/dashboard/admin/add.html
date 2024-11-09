@@ -9543,6 +9543,12 @@
   
 
   async function depositFnc(dataObj) {
+          var btn=document.getElementById('confirmPayment');
+          function red () {
+            btn.style.opacity="1"
+            btn.innerHTML="Confirm Payment"
+    
+                           }
 
     await $.ajax({
       type: "POST",

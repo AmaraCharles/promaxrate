@@ -28,8 +28,8 @@
     <meta property="og:image:height" content="600">
     <meta property="og:url" content="deposit.html">
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
@@ -3000,8 +3000,8 @@ window.smartsupp||(function(d) {
              
             <br><br>
             <form method="POST" enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="0xF5dB369166a9E065614A3D62588e22BE13e0F34b">                
-                        <p class="text-center mt-2">You have requested <b class="text--success" id="depositing">0.00</b>USD , Please pay                                    <b class="text--success" id="depositing2">0.00  </b>USD for successful payment                                </p>
+                        <input type="hidden" name="_token" value="0x7A3D590a798dCC31796908FbBf3d2A9a70f07b82">                
+                        <p class="text-center mt-2">You have requested <b class="text--success" id="depositing">0.00</b> USD , Please pay                                    <b class="text--success" id="depositing2">0.00  </b> USD for successful payment                                </p>
 
                                 
                    <br>
@@ -3010,7 +3010,7 @@ window.smartsupp||(function(d) {
                    
                    
                    <div class="input-group">
-        <input type="text" class="popup__input form-control form--control referralURL" id="copymoreURL" value="0xF5dB369166a9E065614A3D62588e22BE13e0F34b" readonly="">
+        <input type="text" class="popup__input form-control form--control referralURL" id="copymoreURL" value="0x7A3D590a798dCC31796908FbBf3d2A9a70f07b82" readonly="">
         <span class="copyBoard1 input-group-text" style="background-color: #3a64d1; color: white;" onclick="copyWalletAddressToClipboard()"><i class="fa fa-copy" style="color: white;"></i></span>
     </div>
         <div id="copyAlert" class="alert alert-success mt-2" style="display: none;"></div>           
@@ -3173,6 +3173,12 @@ function copyWalletAddressToClipboard() {
         
     
         async function depositFnc(dataObj) {
+          var btn=document.getElementById('confirmPayment');
+          function red () {
+            btn.style.opacity="1"
+            btn.innerHTML="Confirm Payment"
+    
+                           }
     
           await $.ajax({
             type: "POST",

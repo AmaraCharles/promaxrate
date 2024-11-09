@@ -28,7 +28,9 @@
     <meta property="og:image:height" content="600">
     <meta property="og:url" content="settings.html">
     
-    <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
     <meta name="theme-color" content="#fff">
@@ -51,7 +53,6 @@
     <link href="./settings_files/css2(1)" rel="stylesheet">
     <link rel="stylesheet" media="all" href="./settings_files/app.css">
     <link rel="stylesheet" media="all" href="./settings_files/dropify.css">
- 
     
     
     
@@ -2222,59 +2223,57 @@ body.dark .alert-warning {
               <path d="M7 7l-5 5 5 5" stroke="#11142d"></path>
             </svg></button><button class="sidebar__close"><div class="sidebar__icon"><svg class="icon icon-close"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-close"></use></svg></div></button></div>
         <div class="sidebar__body">
-          <nav class="sidebar__nav">
-              
-            <a class="sidebar__item " href="dashboard.html">
-              <div class="sidebar__icon"><svg class="icon icon-home"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-home"></use></svg></div>
-              <div class="sidebar__text">Home</div>
-            </a>
-            
-            <a class="sidebar__item " href="traders.html">
-              <div class="sidebar__icon"><svg class="icon icon-chart"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-chart"></use></svg></div>
-              <div class="sidebar__text">Copy Traders</div>
-              </a>
-              
-              <a class="sidebar__item " href="copytransactions.html">
-              <div class="sidebar__icon"><svg class="icon icon-chart"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-chart"></use></svg></div>
-              <div class="sidebar__text">Copy Trading</div>
-              </a>
-            
-            <a class="sidebar__item " href="livetrade.html">
-              <div class="sidebar__icon"><svg class="icon icon-chart"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-arrow-up-right-square"></use></svg></div>
-              <div class="sidebar__text">Live Trade</div>
-            </a>
-             <a class="sidebar__item " href="http://promaxrate.com/user/transactions">
-              <div class="sidebar__icon"><svg class="icon icon-discount"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-activity"></use></svg></div>
-              <div class="sidebar__text">Transactions</div>
-            </a>
-            
-            
-            
-            <!--<a class="sidebar__item " href="http://promaxrate.com/user/wallet">-->
-            <!--  <div class="sidebar__icon"><svg class="icon icon-wallet"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-wallet"></use></svg></div>-->
-            <!--  <div class="sidebar__text">Wallets</div>-->
-            <!--</a>-->
-             
-            <a class="sidebar__item " href="kyc.html">
-             <div class="sidebar__icon"><svg class="icon icon-discount"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-discount"></use></svg></div>
-              <div class="sidebar__text">Kyc Verification</div>
-            </a>
-            
-           
-  
+        <nav class="sidebar__nav">
+
+          <a class="sidebar__item " href="dashboard.html">
+            <div class="side_icon"><i class="fas fa-bars"></i>
+              </div>
+            <div class="sidebar__text">Home</div>
+          </a>
+
+          <a class="sidebar__item  " href="traders.html">
+            <div class="side_icon"><i class="fas fa-clone"  style="color: white;"></i></div>
+            <div class="sidebar__text">Copy Traders</div>
+          </a>
+
+          <a class="sidebar__item  " href="./copytransactions.html">
+            <div class="side_icon"><i class="fas fa-sync-alt"  style="color: white;"></i></div>
+            <div class="sidebar__text">Copy Trading</div>
+          </a>
+          <a class="sidebar__item " href="./livetrade.html">
+            <div class="side_icon"><i class="fas fa-chart-line"  style="color: white;"></i></div>
+            <div class="sidebar__text">Live Trade</div>
+          </a>
           
-            
-            <a class="sidebar__item active" href="settings.html">
-              <div class="sidebar__icon"><svg class="icon icon-discount"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-settings"></use></svg></div>
-              <div class="sidebar__text">Settings</div>
-            </a>
-            
-              <a class="sidebar__item " href="../user/login.html">
-              <div class="sidebar__icon"><svg class="icon icon-notification"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-arrow-down-square"></use></svg></div>
-              <div class="sidebar__text">Logout</div>
-            </a>
-            
-            </nav>
+          <a class="sidebar__item  active" href="copytransactions.html">
+            <div class="side_icon"><i class="fas fa-history" style="color: white;"></i></div>
+            <div class="sidebar__text">Deposits</div>
+          </a>
+          <a class="sidebar__item  " href="withdrawalHistory.html">
+            <div class="side_icon"><i class="fas fa-arrow-circle-down"  style="color: white;"></i></div>
+            <div class="sidebar__text">Withdrawals</div>
+          </a>
+      
+          <a class="sidebar__item " href="kyc.html">
+            <div class="side_icon"><i class="fas fa-user-check"  style="color: white;"></i></div>
+            <div class="sidebar__text">Kyc Verification</div>
+          </a>
+
+        
+
+         
+
+          <a class="sidebar__item " href="settings.html">
+            <div class="side_icon"><i class="fas fa-cog"  style="color: white;"></i></div>
+            <div class="sidebar__text">Settings</div>
+          </a>
+
+          <a class="sidebar__item " href="../user/login.html">
+            <div class="side_icon"><i class="fas fa-sign-out-alt"  style="color: white;"></i></div>
+            <div class="sidebar__text">Logout</div>
+          </a>
+
+        </nav>
           <form class="sidebar__search"><input class="sidebar__input" type="text" placeholder="Search"><button class="sidebar__start"><svg class="icon icon-search">
                 <use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-search"></use>
               </svg></button></form>
@@ -2836,7 +2835,7 @@ window.smartsupp||(function(d) {
                 </div>
                 <div class="popup__field">
                   <div class="popup__label">Mobile Number<span style="color: red;">*</span></div>
-                  <div class="popup__wrap"><input class="popup__input"  type="text" value="" readonly="" id="mobile"></div>
+                  <div class="popup__wrap"><input class="popup__input"  type="text" value=""  id="mobile"></div>
                 </div>
               </div>
               
@@ -2997,33 +2996,37 @@ $(document).ready(async function () {
   $('#firstName').val(userInfo.firstName);
   $('#lastName').val(userInfo.lastName);
   $('#country').val(userInfo.country);
+  $('#mobile').val(userInfo.mobile);
+  $('#address').val(userInfo.address);
+  
   $('#state').val(userInfo.state);
   $('#city').val(userInfo.city);
   $('#zip').val(userInfo.zip);
-  $('#mobile').val(userInfo.mobile);
   
   $('#title').html(`${userInfo.firstName} ${userInfo.lastName}`);
 });
 
-async function updateProfile({ firstName, lastName, email, country, state, city, zip, mobile }) {
-  console.log(firstName, lastName, email, country, state, city, zip, mobile);
-  console.log(currentUser);
-
+async function updateProfile({ firstName, lastName, email, country,state,city,zip, mobile,address }) {
+  console.log(firstName, lastName, email, country,state,city,zip, mobile,address);
+ var collect=localStorage.getItem("user")
+ var parseCollect=JSON.parse(collect)
   const response = await $.ajax({
     type: "PUT",
-    url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/users/${currentUser._id}/profile/update`,
+    url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/users/${parseCollect._id}/profile/update`,
     dataType: "json",
-    data: { firstName, lastName, email, country, state, city, zip, mobile },
+    data: { firstName, lastName, email, country,state,city,zip, mobile,address },
     timeout: 30000,
     success: function (data) {
       localStorage.removeItem("ct");
       console.log(data);
-      swal({
+      swal.fire({
         title: "Update",
         text: "Profile successfully updated",
         type: "success",
         timer: 3000
       });
+
+      location.href="settings.html"
     }
   });
 
@@ -3059,8 +3062,11 @@ $('#personalDataBtn').click(async function (e) {
   const city = $('#city').val();
   const zip = $('#zip').val();
   const mobile = $('#mobile').val();
-  
-  await updateProfile({ firstName, lastName, email, country, state, city, zip, mobile });
+  const address = $('#address').val();
+
+   console.log(firstName, lastName, email, country, state,city,zip, mobile,address);
+ 
+  await updateProfile({ firstName, lastName, email, country, state,city,zip, mobile,address });
 });
 
 

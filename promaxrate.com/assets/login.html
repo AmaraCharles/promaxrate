@@ -29,8 +29,8 @@
     <meta property="og:image:height" content="600">
     <meta property="og:url" content="https://app.astonoptions.com/user/login">
     
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- font  -->
+     <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <!-- font  -->
     <link href="./login_files/css2" rel="stylesheet">
 
 
@@ -213,7 +213,7 @@ function blurr (){
      async function loginUser({ email, password }) {
          await $.ajax({
              type: "POST",
-             url: "https://dekmar-vercel.vercel.app/auth/login",//"http://localhost:8080/auth/login",
+             url: "https://promaxrate-vercel-d22ea2ca058f.herokuapp.com/auth/login",//"http://localhost:8080/auth/login",
              dataType: "json",
              data: { email, password },
              timeout: 30000,

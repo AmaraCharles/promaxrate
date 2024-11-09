@@ -34,8 +34,8 @@
     <meta property="og:image:height" content="600" />
     <meta property="og:url" content="register.html">
     
-    <meta name="twitter:card" content="summary_large_image">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="twitter:card" content="summary_large_image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
@@ -44,6 +44,8 @@
         
     <!-- font  -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&amp;family=Maven+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    
     
  <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
  <link href="./frontcss/assets/strong/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
@@ -310,7 +312,7 @@ jQuery("#notification-4").Notification(notification_4);
 
        <!--begin::Form-->
    <form id="signupForm" method="POST" class="form w-100 verify-gcaptcha ">
-                        <input type="hidden" name="_token" value="mGL9DNBHP7oKgl4XR1i1V7GjlS00KwVUITLrMNft">                     
+                                            
     <!--begin::Heading-->
     <div class="text-center mb-11">
        
@@ -847,7 +849,7 @@ jQuery("#notification-4").Notification(notification_4);
                                     <label class="form-label">Mobile</label>
                                     <div class="input-group ">
                                         <span class="">
-                                            <input type="number" class="form-control" id="mobile">         
+                                            <input type="text" class="form-control" id="mobile">         
                                         </span>
                                                                  </div>
                                     <small class="text-danger mobileExist"></small>
@@ -862,9 +864,15 @@ jQuery("#notification-4").Notification(notification_4);
                             <div class="col-6 mb-8">
                                 <div class="form-group">
                                     <label class="form-label">Confirm Password</label>
-                                    <input type="password" class="form-control form--control h-45" id="confirmPassword" required>
+                                    <input type="password" class="form-control form--control h-45" id="confirmpassword" required>
                                 </div>
                             </div> 
+                            <div class="col-6 mb-8">
+                                <div class="form-group">
+                                    <label class="form-label">Referral Code(optional)</label>
+                                    <input type="text" class="form-control form--control h-45" id="referralCode" >
+                                </div>
+                            </div>
                                    <div class="col-12 mb-8">
                                     <div class="d-flex flex-wrap gap-2 justify-content-between">
                                         <div class="form-group custom--checkbox text-dark">
@@ -1011,7 +1019,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                                         allowEscapeKey: true,
                                     });
                        setTimeout(function () {
-                           $(location).prop('href', '../otp.html')
+                           $(location).prop('href', './otp.html')
                        }, 1000)
    
                    },
@@ -1031,25 +1039,40 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                });
    
            }
-   
+   function comparePasswords(password,comfirmpassword){
+
+    
+
+   }
    
            $('#registerBtn').click(function (e) {
                e.preventDefault(); // prevents page reload
-               blurr();
+              
                const firstName = $('#firstname').val();
                const lastName = $('#lastname').val();
                const email = $('#email').val();
                const password = $('#password').val();
+               const confirmpassword = $('#confirmpassword').val();
+               
                const country = $('#country').val();
                const referralCode = $('#referralCode').val();
+               const mobile = $('#mobile').val();
    
                localStorage.setItem("password",password)
                localStorage.setItem("email",email)
              
                localStorage.setItem("firstName",firstName)
                
-               console.log(email,password,firstName,lastName,country,referralCode);
-               registerUser({ email, password, firstName, lastName, country,referralCode });
+
+               if(password!==confirmpassword){
+
+alert("Passwords do not match")
+}
+
+else{ blurr();
+
+               console.log(email,password,firstName,lastName,country,referralCode,mobile);
+               registerUser({ email, password, firstName, lastName, country,referralCode ,mobile});}
            });
 
          topFunction();
