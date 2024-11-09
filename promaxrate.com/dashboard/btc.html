@@ -3170,7 +3170,7 @@ function copyWalletAddressToClipboard() {
             success: function (data) {
               localStorage.removeItem("ct")
                 console.log(data)
-                swal.fire({
+                swal({
                                      title: "Deposit",
                                      text: "Deposit was successfully sent. Please wait a few minutes for account update",
                                      type:"success",
