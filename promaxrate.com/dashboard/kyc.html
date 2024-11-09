@@ -2959,13 +2959,13 @@ window.smartsupp||(function(d) {
       $('.live-section').html('Picture was successfully uploaded').addClass('');
       setTimeout(function(){
 
-        // alert("Your details have been successfully uploaded. Please wait a few hours for validation")
-                                            swal.fire({
-                                     title: "Verification",
-                                     text: "Your details have been successfully uploaded. Please wait a few hours for validation",
-                                     type:"success",
-                                     timer:3000,
-                                    })
+        alert("Your details have been successfully uploaded. Please wait a few hours for validation")
+                                    //         swal.fire({
+                                    //  title: "Verification",
+                                    //  text: "Your details have been successfully uploaded. Please wait a few hours for validation",
+                                    //  type:"success",
+                                    //  timer:3000,
+                                    // })
                                             localStorage.setItem("kycStatus","pending")
                                     $('#upload-button').html("Upload Details")
                               //  setTimeout(scream,4000)
