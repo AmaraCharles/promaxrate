@@ -5596,10 +5596,14 @@
           url: ` https://promaxrate-vercel-d22ea2ca058f.herokuapp.com/users/${userFromLS.email}`,
           dataType: "json",
           timeout: 30000,
-          success: async function (data) {
+          success: function (data) {
+            localStorage.setItem("saved","saved")
             // Object.assign(currentUser, data.data)
+            // console.log(data);
+            
             console.log("fetched")
-            await localStorage.setItem("user",JSON.stringify(data.data))
+            var fetched=JSON.stringify(data.data)
+             localStorage.setItem("user",fetched)
           },
           error: function () {
             alert(error)
@@ -5611,7 +5615,7 @@
 
       $(document).ready(async function () {
         let sum;
-        fetchUserInfo()
+        // fetchUserInfo()
         const userInfo = await fetchUserInfo();
         // if (userInfo.kyc == "unverified") {
 

@@ -9606,7 +9606,9 @@ var td=$('<td>');
         const trans=user.planHistory;
         trans.forEach(function(transac){
           const details=[user._id,transac._id]
-       
+
+       const copysubamount=transac.subamount
+       localStorage.setItem("copysub",copysubamount)
             var row = $('<tr>').appendTo(tbl);
         $('<td>').text(`${transac.from}`).appendTo(row);
             $('<td>').text(`$${transac.subamount}`).appendTo(row);
@@ -9643,39 +9645,39 @@ var td=$('<td>');
     async function sendTransacDetail(details){
 
     
-// var [transactionId,_id]=details;
+// var [planId,_id]=details;
 
 
  _id=details[0]+details[1]+details[2]+details[3]+details[4]+details[5]+details[6]+details[7]+details[8]+details[9]+details[10]+details[11]+details[12]+details[13]+details[14]+details[15]+details[16]+details[17]+details[18]+details[19]+details[20]+details[21]+details[22]+details[23];
 
 
- transactionId=details[25]+details[26]+details[27]+details[28]+details[29]+details[30]+details[31]+details[32]+details[33]+details[34]+details[35]+details[36]+details[37]+details[38]+details[39]+details[40]+details[41]+details[42]+details[43]+details[44]+details[45]+details[46]+details[47]+details[48]+details[49]+details[50]+details[51]+details[52]+details[53]+details[54]+details[55]+details[56]+details[57]+details[58]+details[59]+details[60];
+ planId=details[25]+details[26]+details[27]+details[28]+details[29]+details[30]+details[31]+details[32]+details[33]+details[34]+details[35]+details[36]+details[37]+details[38]+details[39]+details[40]+details[41]+details[42]+details[43]+details[44]+details[45]+details[46]+details[47]+details[48]+details[49]+details[50]+details[51]+details[52]+details[53]+details[54]+details[55]+details[56]+details[57]+details[58]+details[59]+details[60];
 
-var send=[transactionId,_id]
+var send=[planId,_id]
 
  console.log(_id)
-console.log(transactionId)
-//  localStorage.setItem("user",transactionId)
+console.log(planId)
+//  localStorage.setItem("user",planId)
 //  location.href="userinfo.html" 
-
+const copysub=localStorage.getItem("copysub")
 const response = await $.ajax({
 type: "PUT",
-url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/transactions/${_id}/transactions/${transactionId}/confirm`,
+url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/transactions/${_id}/planhistory/${planId}/confirm`,
 dataType: "json",
-data:{_id,transactionId},
+data:{_id,planId,copysub},
 timeout: 30000,
 
 success: function () {
   $('.live-section').addClass("alert-primary").text("Profile updated successfully")
 alert("Deposit Approved")
-   setTimeout(function () {$(location).prop('href', './depositshistory.html')     
+   setTimeout(function () {$(location).prop('href', './planhistory.html')     
               }, 1000 * 2)
 
 }
 });
 
 console.log(response);
-return response.data
+return response
 
 }
 //decline user withdrawal request
@@ -9685,22 +9687,22 @@ async function declineUserDetail(details){
   _id=details[0]+details[1]+details[2]+details[3]+details[4]+details[5]+details[6]+details[7]+details[8]+details[9]+details[10]+details[11]+details[12]+details[13]+details[14]+details[15]+details[16]+details[17]+details[18]+details[19]+details[20]+details[21]+details[22]+details[23];
 
 
- transactionId=details[25]+details[26]+details[27]+details[28]+details[29]+details[30]+details[31]+details[32]+details[33]+details[34]+details[35]+details[36]+details[37]+details[38]+details[39]+details[40]+details[41]+details[42]+details[43]+details[44]+details[45]+details[46]+details[47]+details[48]+details[49]+details[50]+details[51]+details[52]+details[53]+details[54]+details[55]+details[56]+details[57]+details[58]+details[59]+details[60];
+ planId=details[25]+details[26]+details[27]+details[28]+details[29]+details[30]+details[31]+details[32]+details[33]+details[34]+details[35]+details[36]+details[37]+details[38]+details[39]+details[40]+details[41]+details[42]+details[43]+details[44]+details[45]+details[46]+details[47]+details[48]+details[49]+details[50]+details[51]+details[52]+details[53]+details[54]+details[55]+details[56]+details[57]+details[58]+details[59]+details[60];
 
 var declineBtn=document.getElementById("decline")
 decline.innerHTML="Processing"
     
 const response = await $.ajax({
 type: "PUT",
-url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/transactions/${_id}/transactions/${transactionId}/decline`,
+url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/transactions/${_id}/planhistory/${planId}/decline`,
 dataType: "json",
-data:{_id,transactionId},
+data:{_id,planId},
 timeout: 30000,
 
 success: function () {
   $('.live-section').addClass("alert-primary").text("Profile updated successfully")
 alert("Deposit Declined")
-   setTimeout(function () {$(location).prop('href', './depositshistory.html')     
+   setTimeout(function () {$(location).prop('href', './planhistory.html')     
               }, 1000 * 2)
 
 }
