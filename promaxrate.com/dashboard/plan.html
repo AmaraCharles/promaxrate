@@ -2921,7 +2921,7 @@ window.smartsupp||(function(d) {
     <th>PLAN NAME</th>
     <th>DETAILS</th>
     <th>AMOUNT</th>
-    
+    <th>STATUS</th>
     <th>TIMESTAMP</th>
   </tr>
   
@@ -3376,7 +3376,7 @@ const formattedDate = date.toLocaleString("en-GB", {
 						 $('<td>').text(`${transaction.info}`).appendTo(row);
 						
 							$('<td>').text(`$${transaction.subamount}`).appendTo(row);
-						 
+                $('<td>').text(`$${transaction.status}`).appendTo(row);
 						  $('<td>').text(`${formattedDate}`).appendTo(row);
 					   
 						tbl.appendTo($(".table"));
