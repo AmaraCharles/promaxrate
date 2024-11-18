@@ -9330,8 +9330,8 @@
                       <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="amount">AMOUNT</th>
                       <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="amount">PLAN</th>
                       <th style="background-color: rgba(255,255,255,0.1);" class="text-nowrap" id="amount">TRADER</th>
-                      <!-- <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method">Status</th>
-                      <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method">Actions</th> -->
+                       <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method">Status</th>
+                      <th style="background-color: rgba(255,255,255,0.1);" class="text-center" id="method">Actions</th>
                     </tr>
                   </thead>
                   <tbody class="table-body">
@@ -9613,10 +9613,10 @@ var td=$('<td>');
               $('<td>').text(`${transac.subname.slice(12)}`).appendTo(row);
                 $('<td>').text(`${transac.trader}`).appendTo(row);
             
-            //   $('<td>').text(`${transac.status}`).appendTo(row);
+              $('<td>').text(`${transac.status}`).appendTo(row);
             
-            //   $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendTransacDetail(\''+details+'\')" id="approve" >Approve</a></td>').appendTo (row);
-            //     $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="declineUserDetail(\''+details+'\')" id="decline" >Decline</a></td>').appendTo (row);
+              $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendTransacDetail(\''+details+'\')" id="approve" >Approve</a></td>').appendTo (row);
+                $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="declineUserDetail(\''+details+'\')" id="decline" >Decline</a></td>').appendTo (row);
                 $('<td><a  class="btn-primary btn-lg pl-10 w-20 mr-3 m-5" onclick="sendUserDetail(\''+user.email+'\')"  >User Info</a></td>').appendTo (row);
              
               
