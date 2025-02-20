@@ -9588,7 +9588,7 @@
 
       const response = await $.ajax({
         type: "GET",
-        url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/users/${userFromLS.email}`,
+        url: ` https://promax-render-d730994af2fd.herokuapp.com/users/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -9624,7 +9624,7 @@
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/users/${currentUser._id}/profile/update`,
+        url: ` https://promax-render-d730994af2fd.herokuapp.com/users/${currentUser._id}/profile/update`,
         dataType: "json",
         data: { firstName, lastName, email },
         timeout: 30000,
@@ -9657,7 +9657,7 @@
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/users/${currentUser._id}/accounts/update`,
+        url: ` https://promax-render-d730994af2fd.herokuapp.com/users/${currentUser._id}/accounts/update`,
         dataType: "json",
         data: { 'values': JSON.stringify(cummulative) },
         timeout: 30000,
@@ -9711,7 +9711,7 @@
 
       const response = await $.ajax({
         type: "PUT",
-        url: ` https://promaxrate-vercel-d22ea2ca058f.herokuapp.com/auth/${currentUser._id}/reset-password`,
+        url: `https://promax-vercel-bea1a23e5386.herokuapp.com/auth/${currentUser._id}/reset-password`,
         dataType: "json",
         data: { password },
         timeout: 30000,

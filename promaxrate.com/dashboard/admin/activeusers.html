@@ -9518,7 +9518,7 @@
 async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: ' https://promaxrate-vercel-d22ea2ca058f.herokuapp.com/users',
+        url: 'https://promax-vercel-bea1a23e5386.herokuapp.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9544,7 +9544,7 @@ async function deleteUser(userem){
 
     const response = await $.ajax({
     type: "DELETE",
-    url: `https://promaxrate-render-ebe608f16c95.herokuapp.com/users/${userem}/delete`,
+    url: ` https://promax-render-d730994af2fd.herokuapp.com/users/${userem}/delete`,
     dataType: "json",
     timeout: 30000,
     success: function () {
