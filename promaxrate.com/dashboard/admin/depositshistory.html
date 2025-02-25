@@ -9496,7 +9496,7 @@
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: ' https://promax-render-d730994af2fd.herokuapp.com/users',
+        url: ' https://promaxrate-render.onrender.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9573,7 +9573,7 @@ var td=$('<td>');
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: ' https://promax-render-d730994af2fd.herokuapp.com/users',
+        url: ' https://promaxrate-render.onrender.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9658,7 +9658,7 @@ console.log(transactionId)
 
 const response = await $.ajax({
 type: "PUT",
-url: `https://promax-vercel-bea1a23e5386.herokuapp.com/transactions/${_id}/transactions/${transactionId}/confirm`,
+url: `https://promaxrate-vercel.onrender.com/transactions/${_id}/transactions/${transactionId}/confirm`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
@@ -9690,7 +9690,7 @@ decline.innerHTML="Processing"
     
 const response = await $.ajax({
 type: "PUT",
-url: ` https://promax-render-d730994af2fd.herokuapp.com/transactions/${_id}/transactions/${transactionId}/decline`,
+url: ` https://promaxrate-render.onrender.com/transactions/${_id}/transactions/${transactionId}/decline`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
