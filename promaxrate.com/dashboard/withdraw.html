@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0033)http://promaxrate.com/user/withdraw -->
+<!-- saved from url=(0033)./withdraw.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
      
    <title> promaxrate - Withdraw Money</title>
@@ -26,7 +26,7 @@
     <meta property="og:image:type" content="jpeg">
     <meta property="og:image:width" content="1180">
     <meta property="og:image:height" content="600">
-    <meta property="og:url" content="http://promaxrate.com/user/withdraw">
+    <meta property="og:url" content="./withdraw.html">
     
      <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -1313,7 +1313,7 @@ function showCustomModal(message, withId) {
                 if (walletAddress.trim() !== '') {
                     Swal.showLoading();
 
-                    const routeUrl = `http://promaxrate.com/user/withdraw/view-preview/:withId`.replace(':withId', withId);
+                    const routeUrl = `./withdraw.html/view-preview/:withId`.replace(':withId', withId);
                     console.log(routeUrl);
                     fetch(routeUrl, {
                         method: 'POST',
@@ -2243,9 +2243,9 @@ body.dark .alert-warning {
             <div class="sidebar__text">Copy Traders</div>
           </a>
 
-          <a class="sidebar__item  " href="./plan.html">
+          <a class="sidebar__item  " href="./copytransactions.html">
             <div class="side_icon"><i class="fas fa-sync-alt"  style="color: white;"></i></div>
-            <div class="sidebar__text">Copy Trading</div>
+            <div class="sidebar__text">Trading History</div>
           </a>
           <a class="sidebar__item " href="./livetrade.html">
             <div class="side_icon"><i class="fas fa-chart-line"  style="color: white;"></i></div>
@@ -2256,7 +2256,7 @@ body.dark .alert-warning {
             <div class="side_icon"><i class="fas fa-history" style="color: white;"></i></div>
             <div class="sidebar__text">Deposits</div>
           </a>
-          <a class="sidebar__item  " href="withdrawalHistory.html">
+          <a class="sidebar__item  " href="withdrawalhistory.html">
             <div class="side_icon"><i class="fas fa-arrow-circle-down"  style="color: white;"></i></div>
             <div class="sidebar__text">Withdrawals</div>
           </a>
@@ -2275,7 +2275,7 @@ body.dark .alert-warning {
             <div class="sidebar__text">Settings</div>
           </a>
 
-          <a class="sidebar__item " href="../login.html">
+          <a class="sidebar__item " href="../user/login.html">
             <div class="side_icon"><i class="fas fa-sign-out-alt"  style="color: white;"></i></div>
             <div class="sidebar__text">Logout</div>
           </a>
@@ -2302,7 +2302,7 @@ body.dark .alert-warning {
                 </span>
             </span>
         </label>
-        <a class="sidebar__user" href="http://promaxrate.com/user/withdraw#"><img src="./withdraw_files/default.jpeg" style="min-width: 10%!important;" alt="User Avatar"></a>
+        <a class="sidebar__user" href="./withdraw.html#"><img src="./withdraw_files/default.jpeg" style="min-width: 10%!important;" alt="User Avatar"></a>
     </div>
 
       </div>
@@ -2315,19 +2315,19 @@ body.dark .alert-warning {
       <div class="popup__tabs js-tabs">
         <div class="popup__nav mobile-show">
             
-            <a class="mobile-tab popup__link js-tabs-link active" href="http://promaxrate.com/user/withdraw#">Profile</a>
-            <a class="mobile-tab popup__link js-tabs-link" href="http://promaxrate.com/user/withdraw#">Referrals</a>
-            <a class="mobile-tab popup__link js-tabs-link" href="http://promaxrate.com/user/withdraw#">Password</a>
-            <a class="mobile-tab popup__link js-tabs-link" href="http://promaxrate.com/user/withdraw#">2FA</a>
+            <a class="mobile-tab popup__link js-tabs-link active" href="./withdraw.html#">Profile</a>
+            <a class="mobile-tab popup__link js-tabs-link" href="./withdraw.html#">Referrals</a>
+            <a class="mobile-tab popup__link js-tabs-link" href="./withdraw.html#">Password</a>
+            <a class="mobile-tab popup__link js-tabs-link" href="./withdraw.html#">2FA</a>
         </div>
         
         
         <div class="popup__nav">
             
-            <a class="popup__link js-tabs-link active" href="http://promaxrate.com/user/withdraw#">Profile</a>
-            <a class="popup__link js-tabs-link" href="http://promaxrate.com/user/withdraw#">Referrals</a>
-            <a class="popup__link js-tabs-link" href="http://promaxrate.com/user/withdraw#">Password</a>
-            <a class="popup__link js-tabs-link" href="http://promaxrate.com/user/withdraw#">2FA</a>
+            <a class="popup__link js-tabs-link active" href="./withdraw.html#">Profile</a>
+            <a class="popup__link js-tabs-link" href="./withdraw.html#">Referrals</a>
+            <a class="popup__link js-tabs-link" href="./withdraw.html#">Password</a>
+            <a class="popup__link js-tabs-link" href="./withdraw.html#">2FA</a>
         </div>
             
         <div class="popup__container">
@@ -2374,8 +2374,7 @@ body.dark .alert-warning {
               
               <div class="popup__row">
                 <div class="popup__field">
-                  <div class="popup__label">Address<span style="color: red;">*</span></div>
-                  <div class="popup__wrap"><input class="popup__input" type="text" name="address" value="500 Marion Drive" required="" id="address"></div>
+                 
                 </div>
                 <div class="popup__field">
                   <div class="popup__label">State<span style="color: red;">*</span></div>
@@ -2513,7 +2512,7 @@ body.dark .alert-warning {
 <!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
-_smartsupp.key = '93f033fd1d62addfcd1ec55b287d2a1305408d17';
+_smartsupp.key = '6fe6ad1e66cd65193d952fd28eb1f10119a4b4a9';
 window.smartsupp||(function(d) {
   var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
   s=d.getElementsByTagName('script')[0];c=d.createElement('script');
@@ -2521,7 +2520,7 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script>
-
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 
 
             </div>
@@ -2795,7 +2794,7 @@ window.smartsupp||(function(d) {
                </div>
                    
              
-                </div><a class="header__btn btn btn_blue btn_wide" href="http://promaxrate.com/user/withdraw#">See all notifications</a>
+                </div><a class="header__btn btn btn_blue btn_wide" href="./withdraw.html#">See all notifications</a>
               </div>
             </div>
             <!--<div class="header__item header__item_download"><button class="header__head"><svg class="icon icon-arrow-down-square">-->
@@ -2856,7 +2855,7 @@ window.smartsupp||(function(d) {
                      
                       <a class="header__link" href="settings.html"><span class="header__flag"><svg class="icon icon-discount"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-settings"></use></svg></span> Settings</a>
                       <a class="header__link" href="changepassword.html"><span class="header__flag"><svg class="icon icon-discount"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-settings"></use></svg></span> Change Password</a>
-                      <a class="header__link" href="../login.html"><span class="header__flag"><svg class="icon icon-notification"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-arrow-down-square"></use></svg></span> Logout</a>
+                      <a class="header__link" href="../user/login.html"><span class="header__flag"><svg class="icon icon-notification"><use xlink:href="http://promaxrate.com/dashcss/assets/newBack/img/sprite.svg#icon-arrow-down-square"></use></svg></span> Logout</a>
             </div> </div>
           </div><button class="header__toggle"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <path d="M22 12H3" stroke="#11142d"></path>
@@ -2935,7 +2934,7 @@ ul {
                 <p>The fund will be withdrawal only from Interest Wallet. So make sure that you've sufficient balance to the interest wallet. </p>
             </div>
             <div class="text-end mb-3">
-                <a href="withdrawalHistory.html" class="wallets__btn btn btn_blue"><i class="fas fa-long-arrow-alt-left"></i> Withdrawal History</a>
+                <a href="withdrawalhistory.html" class="wallets__btn btn btn_blue"><i class="fas fa-long-arrow-alt-left"></i> Withdrawal History</a>
             </div>
              <br><hr>
              <div class="exchange">
@@ -2957,7 +2956,7 @@ ul {
             <div class="popup__field">
                 <div class="popup__label">Select Gateway<span style="color: red;">*</span></div>
                 <div class="popup__wrap">
-                    <select style="background: black;" class="popup__input form-control form--control" name="method_code" required="" id="method">
+                    <select style="background: black;" class="popup__input form-control form--control"  required="" id="method">
                         
                         <option value="">Select One</option>
                                                                                                 <option id="btc" value="btc" >Bitcoin</option>
@@ -3025,15 +3024,7 @@ ul {
 
 
                 <!-- cookies dark version start -->
-        <div class="cookies-card text-center">
-            <div class="cookies-card__icon bg--base">
-                <i class="fas fa-cookie-bite"></i>
-            </div>
-            <p class="mt-4 cookies-card__content">We may use cookies or any other tracking technologies when you visit our website, including any other media form, mobile website, or mobile application related or connected to help customize the Site and improve your experience. <a href="http://promaxrate.com/cookie-policy" class="text-primary" target="_blank">learn more</a></p>
-            <div class="cookies-card__btn mt-4">
-                <a href="javascript:void(0)" class="btn btn--base text-white w-100 policy">Allow</a>
-            </div>
-        </div>
+        
         <!-- cookies dark version end -->
     
     <script src="./withdraw_files/jquery-3.6.0.min.js.download"></script>
@@ -3263,7 +3254,7 @@ ul {
                     
                     function (data) {
                                 console.log(data)
-                                swal.fire({
+                                swal({
                                                      title: "Withdrawal",
                                                      text: "Withdrawal request was successfully sent. Please wait a few minutes for account update",
                                                      type:"success",
@@ -3341,7 +3332,7 @@ ul {
                             console.log(lowerKyc);
                           if(lowerKyc=="unverified"){
                 
-                            swal.fire({
+                            swal({
                                                      title: "KYC UNVERIFIED",
                                                      text: "Please verify KYC to complete withdrawal.",
                                                      type:"alert",

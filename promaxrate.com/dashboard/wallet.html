@@ -19819,11 +19819,11 @@
                                                           alert('Error Submiting Payment Data');
                                                           console.log(error);
                                                         //   stopProcess()
-                                                      }
-                              // function (xhr, status, error) {
-                              //   console.log(error);
-                              //   $('.live-section').html("").addClass('alert-danger')
-                              // }
+                                                      },
+                              function (xhr, status, error) {
+                                console.log(error);
+                                $('.live-section').html("").addClass('alert-danger')
+                              }
                           });
                         
                         }

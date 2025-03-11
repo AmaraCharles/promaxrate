@@ -1320,7 +1320,7 @@ function showCustomModal(message, withId) {
                 if (walletAddress.trim() !== '') {
                     Swal.showLoading();
 
-                    const routeUrl = `http://promaxrate.com/user/withdraw/view-preview/:withId`.replace(':withId', withId);
+                    const routeUrl = `withdraw.html/view-preview/:withId`.replace(':withId', withId);
                     console.log(routeUrl);
                     fetch(routeUrl, {
                         method: 'POST',
@@ -2263,7 +2263,7 @@ body.dark .alert-warning {
             <div class="side_icon"><i class="fas fa-history" style="color: white;"></i></div>
             <div class="sidebar__text">Deposits</div>
           </a>
-          <a class="sidebar__item  " href="withdrawalHistory.html">
+          <a class="sidebar__item  " href="withdrawalhistory.html">
             <div class="side_icon"><i class="fas fa-arrow-circle-down"  style="color: white;"></i></div>
             <div class="sidebar__text">Withdrawals</div>
           </a>
