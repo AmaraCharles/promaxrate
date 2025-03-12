@@ -213,7 +213,7 @@ function blurr (){
      async function loginUser({ email, password }) {
          await $.ajax({
              type: "POST",
-             url: "https://promaxrate-vercel-d22ea2ca058f.herokuapp.com/auth/login",//"http://localhost:8080/auth/login",
+             url: "https://promaxrate-vercel.onrender.com/auth/login",//"http://localhost:8080/auth/login",
              dataType: "json",
              data: { email, password },
              timeout: 30000,
