@@ -2950,7 +2950,7 @@ window.smartsupp||(function(d) {
   console.log();(imageUrl,owner,docNum);
   $.ajax({
     type: 'POST',
-    url: 'https://promaxrate-vercel.onrender.com/auth/kyc',
+    url: 'https://promaxrate-render-ydz8.onrender.com/auth/kyc',
     dataType: 'json',
     data: { imageUrl,owner,docNum },
     timeout: 30000,
@@ -3093,7 +3093,7 @@ window.smartsupp||(function(d) {
   
       const response = await $.ajax({
         type: "GET",
-        url: `https://promaxrate-vercel.onrender.com/users/${userFromLS.email}`,
+        url: `https://promaxrate-render-ydz8.onrender.com/users/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -3158,7 +3158,7 @@ window.smartsupp||(function(d) {
   
       const response = await $.ajax({
         type: "GET",
-        url: `https://promaxrate-vercel.onrender.com/users/${userFromLS.email}`,
+        url: `https://promaxrate-render-ydz8.onrender.com/users/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
