@@ -1242,6 +1242,16 @@
 
   
   <script>
+     $(document).ready(async function () {
+       const findOldPic=   localStorage.getItem("imgUrl")
+              if(findOldPic){
+
+                localStorage.removeItem("imgUrl")
+                console.log("old url removed");
+                
+              }
+
+      });
     function copy() {
             /* Get the text field */
             var copyText = document.getElementById("reflink");
