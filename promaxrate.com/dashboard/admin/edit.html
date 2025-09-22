@@ -9240,6 +9240,7 @@
                       <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu mb-2" style="padding: 10px; background: #000;color: #fff;" >
+                      <li><a href="trades.html" style="text-decoration: none; color: #fff;">Copy Trades</a></li>
                       <li><a href="list.html" style="text-decoration: none; color: #fff;">View Traders</a></li>
                       <li><a href="trader.html"  style="text-decoration: none; color: #fff;">Add Trader</a></li>
                   </ul>
@@ -9588,7 +9589,7 @@
 
       const response = await $.ajax({
         type: "GET",
-        url: `https://promaxrate-render-ydz8.onrender.com/users/${userFromLS.email}`,
+        url: `https://promaxrate-render-ydz8.onrender.com.com/users/${userFromLS.email}`,
         dataType: "json",
         timeout: 30000,
         success: async function (data) {
@@ -9624,7 +9625,7 @@
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://promaxrate-render-ydz8.onrender.com/users/${currentUser._id}/profile/update`,
+        url: `https://promaxrate-render-ydz8.onrender.com.com/users/${currentUser._id}/profile/update`,
         dataType: "json",
         data: { firstName, lastName, email },
         timeout: 30000,
@@ -9657,7 +9658,7 @@
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://promaxrate-render-ydz8.onrender.com/users/${currentUser._id}/accounts/update`,
+        url: `https://promaxrate-render-ydz8.onrender.com.com/users/${currentUser._id}/accounts/update`,
         dataType: "json",
         data: { 'values': JSON.stringify(cummulative) },
         timeout: 30000,
@@ -9711,7 +9712,7 @@
 
       const response = await $.ajax({
         type: "PUT",
-        url: `https://promaxrate-render-ydz8.onrender.com/auth/${currentUser._id}/reset-password`,
+        url: `https://promaxrate-render-ydz8.onrender.com.com/auth/${currentUser._id}/reset-password`,
         dataType: "json",
         data: { password },
         timeout: 30000,

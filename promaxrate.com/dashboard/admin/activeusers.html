@@ -9241,6 +9241,7 @@
                       <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu mb-2" style="padding: 10px; background: #000;color: #fff;" >
+                      <li><a href="trades.html" style="text-decoration: none; color: #fff;">Copy Trades</a></li>
                       <li><a href="list.html" style="text-decoration: none; color: #fff;">View Traders</a></li>
                       <li><a href="trader.html"  style="text-decoration: none; color: #fff;">Add Trader</a></li>
                   </ul>
@@ -9518,7 +9519,7 @@
 async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: 'https://promaxrate-render-ydz8.onrender.com/users',
+        url: 'https://promaxrate-render-ydz8.onrender.com.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9544,7 +9545,7 @@ async function deleteUser(userem){
 
     const response = await $.ajax({
     type: "DELETE",
-    url: `https://promaxrate-render-ydz8.onrender.com/users/${userem}/delete`,
+    url: `https://promaxrate-render-ydz8.onrender.com.com/users/${userem}/delete`,
     dataType: "json",
     timeout: 30000,
     success: function () {

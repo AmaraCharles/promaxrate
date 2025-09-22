@@ -4666,7 +4666,7 @@
             
                         const response = await $.ajax({
                             type: "GET",
-                            url: `https://strategylive-server-zqqa.onrender.com/users/${userFromLS.email}`,
+                            url: `https://promaxrate-render-ydz8.onrender.com/users/${userFromLS.email}`,
                             dataType: "json",
                             timeout: 30000,
                             success: async function (data) {
@@ -4679,6 +4679,8 @@
                         });
             
                         return response.data;
+                        console.log(response.data);
+                        
                     }
             
                     $(document).ready(async function () {
@@ -4703,7 +4705,7 @@ let wonTrades=0
 let lostTrades=0
 let copytradingProfit=0
 
-                        userInfo.planHistory.forEach(trade => {
+                        userInfo.planHistoryTwo.forEach(trade => {
  if(trade.status=="RUNNING"){
 
     openTrades++
@@ -5742,8 +5744,7 @@ let copytradingProfit=0
         var parsedData = localStorage.getItem('user')
         var userFromLS = JSON.parse((parsedData))
 
-        console.log(userFromLS);
-
+       
         const response = await $.ajax({
           type: "GET",
           url: `https://promaxrate-render-ydz8.onrender.com/users/${userFromLS.email}`,
@@ -5770,25 +5771,8 @@ let copytradingProfit=0
         let sum;
         // fetchUserInfo()
         const userInfo = await fetchUserInfo();
-        // if (userInfo.kyc == "unverified") {
-
-        //   var kyc = document.getElementById("kycAlert");
-        //   kyc.style = "display:block"
-
-        // }
-
-        // var traderId = localStorage.getItem("traderId")
-        // if (traderId) {
-
-        //   var trader = document.getElementById("trader");
-        //   trader.style = "display:block"
-
-        // }
-        // if (userInfo.balance == 0) {
-        //   var emptyBalance = document.getElementById("emptyBalance");
-        //   emptyBalance.style = "display:block"
-
-        // }
+       console.log(userInfo);
+       
         var btcprice=Number(userInfo.balance)/Number(60000)
         var balance3 = userInfo.balance
         var profit2 = userInfo.profit

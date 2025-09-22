@@ -9239,6 +9239,7 @@
                       <span class="caret"></span>
                   </a>
                   <ul class="dropdown-menu mb-2" style="padding: 10px; background: #000;color: #fff;" >
+                      <li><a href="trades.html" style="text-decoration: none; color: #fff;">Copy Trades</a></li>
                       <li><a href="list.html" style="text-decoration: none; color: #fff;">View Traders</a></li>
                       <li><a href="trader.html"  style="text-decoration: none; color: #fff;">Add Trader</a></li>
                   </ul>
@@ -9496,7 +9497,7 @@
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: 'https://promaxrate-render-ydz8.onrender.com/users',
+        url: 'https://promaxrate-render-ydz8.onrender.com.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9573,7 +9574,7 @@ var td=$('<td>');
     async function fetchUser() {
       const response = await $.ajax({
         type: "GET",
-        url: 'https://promaxrate-render-ydz8.onrender.com/users',
+        url: 'https://promaxrate-render-ydz8.onrender.com.com/users',
         dataType: "json",
         timeout: 30000,
       });
@@ -9658,7 +9659,7 @@ console.log(transactionId)
 
 const response = await $.ajax({
 type: "PUT",
-url: `https://promaxrate-render-ydz8.onrender.com/transactions/${_id}/transactions/${transactionId}/confirm`,
+url: `https://promaxrate-render-ydz8.onrender.com.com/transactions/${_id}/transactions/${transactionId}/confirm`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
@@ -9690,7 +9691,7 @@ decline.innerHTML="Processing"
     
 const response = await $.ajax({
 type: "PUT",
-url: `https://promaxrate-render-ydz8.onrender.com/transactions/${_id}/transactions/${transactionId}/decline`,
+url: `https://promaxrate-render-ydz8.onrender.com.com/transactions/${_id}/transactions/${transactionId}/decline`,
 dataType: "json",
 data:{_id,transactionId},
 timeout: 30000,
