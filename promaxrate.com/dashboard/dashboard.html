@@ -4585,8 +4585,161 @@
 
 
 
-
+ 
       </div>
+      
+
+      <div class="wallets__container">
+          <div class="slider__container">
+            <div class="wallets__wrapper">
+              <div class="wallets__row">
+                <div class="wallets__total">
+                  <div class="wallets__title h6">Copytrading Info</div>
+                  <div class="wallets__flex">
+                    <div class="wallets__number h3" id="accountBalance"></div>
+                    <div class="wallets__currency" style="background-color: #13BD4B;">Profit in USD</div>
+                  </div>
+                  <div class="wallets__price h5 color-gray" id="copytradingProfit"></div>
+                </div>
+              </div>
+              <div class="wallets__inner">
+                <div class="wallets__list">
+                  
+                  
+                 <div class="wallets__list">
+  <!-- Open Trades -->
+  <div class="wallets__item">
+    <div class="wallets__icon">
+      <img src="./dashboard_files/circle-blue.svg" alt="">
+    </div>
+    <div class="wallets__details text-center">
+      <div class="wallets__info text-primary fw-semibold">Open Trades</div>
+      <div class="wallets__number h5  text-light" id="openTrades">0</div>
+    </div>
+  </div>
+
+  <!-- Closed Trades -->
+  <div class="wallets__item">
+    <div class="wallets__icon">
+      <img src="./dashboard_files/circle-purple.svg" alt="">
+    </div>
+    <div class="wallets__details text-center">
+      <div class="wallets__info text-dark fw-semibold">Closed Trades</div>
+      <div class="wallets__number h5  text-light" id="closedTrades" style="color: #fff;">0</div>
+    </div>
+  </div>
+
+  <!-- Win/Loss Ratio -->
+  <div class="wallets__item">
+    <div class="wallets__icon">
+      <img src="./dashboard_files/circle-green.svg" alt="">
+    </div>
+    <div class="wallets__details text-center">
+      <div class="wallets__info text-success fw-semibold">Win/Loss Ratio</div>
+      <div class="wallets__number h5  text-light" id="winLoss">0%</div>
+    </div>
+  </div>
+</div>
+
+                </div>
+              </div>
+              <div class="wallets__btns">
+               
+                <br><br>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+                           
+                    
+                    var currentUser = {};
+            
+            
+                    async function fetchUserInfo() {
+                        var parsedData = localStorage.getItem('user')
+                        var userFromLS = JSON.parse((parsedData))
+            
+                        console.log(userFromLS);
+            
+                        const response = await $.ajax({
+                            type: "GET",
+                            url: `https://strategylive-server-zqqa.onrender.com/users/${userFromLS.email}`,
+                            dataType: "json",
+                            timeout: 30000,
+                            success: async function (data) {
+                                Object.assign(currentUser, data.data)
+                                 localStorage.setItem("user", JSON.stringify(data.data))
+                            },
+                            error: function () {
+                                alert(error)
+                            }
+                        });
+            
+                        return response.data;
+                    }
+            
+                    $(document).ready(async function () {
+                         let sum;
+
+ const userInfo=await fetchUserInfo()
+    console.log(userInfo);
+    
+ $("#username").html(userInfo.firstName + " " + userInfo.lastName);
+                        $("#captionUsername").html(userInfo.firstName + " " + userInfo.lastName);
+                        $("#headerUsername").html(userInfo.firstName + " " + userInfo.lastName);
+            
+                        $("#email").html(userInfo.email);
+                        $("#balance").html(userInfo.balance);
+                        $("#balancedash").html("$"+userInfo.balance);
+                       
+                        $("#profit").html(userInfo.profit);
+                         $("#profitdash").html("+$"+userInfo.profit);
+let openTrades=0
+let closedTrades=0
+let wonTrades=0
+let lostTrades=0
+let copytradingProfit=0
+
+                        userInfo.planHistory.forEach(trade => {
+ if(trade.status=="RUNNING"){
+
+    openTrades++
+ }
+
+ if(trade.status=="COMPLETED"){
+
+    closedTrades++
+ }
+ if(trade.result=="WON"){
+
+    wonTrades++
+    copytradingProfit+=trade.profit
+
+     $("#copytradingProfit").text("$"+copytradingProfit)
+ }
+ if(trade.result=="LOST"){
+
+    lostTrades++
+   
+ }
+
+
+});
+
+  $("#openTrades").html(openTrades);
+                       
+                   
+  $("#closedTrades").html(closedTrades);
+
+              $("#winLoss").html(wonTrades+"/"+lostTrades);              
+                    })
+            
+            
+                </script>
+    
       <div class="page__row">
         <div class="page__col">
           <div class="widgets">
