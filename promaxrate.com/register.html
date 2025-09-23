@@ -963,7 +963,7 @@ Sign Up
     async function fetchUser() {
           const response = await $.ajax({
             type: "GET",
-            url: 'https://promaxrate-render-ydz8.onrender.com.com/users',
+            url: 'https://promaxrate-render-ydz8.onrender.com/users',
             dataType: "json",
             timeout: 30000,
           });
@@ -1003,7 +1003,7 @@ document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
            async function registerUser(values) {
                await $.ajax({
                    type: "POST",
-                   url: "https://promaxrate-render-ydz8.onrender.com.com/auth/register",
+                   url: "https://promaxrate-render-ydz8.onrender.com/auth/register",
                    dataType: "json",
                    data: { ...values },
                    timeout: 30000,
